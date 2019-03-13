@@ -6,38 +6,48 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "Party? Done. So your're going home but it's pass your curfew.",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Take Shortcut",
+                    nextLevel: "shortcut",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Long Way Home",
+                    nextLevel: "long",
                 },
             ]
         },
 
-        cave: {
+        shortcut: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You're Walking through an alley and hear footsteps behind you.",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Turn Around",
                     nextLevel: "start",
+                },
+                
+                {
+                    text: "Keep Walking",
+                    nextLevel: "walking",
                 },
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        long: {
+            message: "As you're walking you find a $5 bill near a white van.",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Grab it.",
+                    nextLevel: "grab",
+                },
+                
+                {
+                    text: "Nah, I'm good. ",
+                    nextLevel: "nah",
                 },
             ]
         },
